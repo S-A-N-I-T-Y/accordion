@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+  line-height: 1.5;
+}
+body {
+  background: #c0bfbf;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center;
+}
+main {
+  padding: 0px 10px;
+}
+.accordion-container {
+  max-width: 600px;
+  background: #ffffff;
+  padding: 20px;
+  border: 2px solid #e29191;
+  box-shadow: 20px 20px 60px #e29191 -20px -20px 60px #e29191;
+  border-radius: 5px;
+}
+.accordion {
+  border: 0.5px solid #e29191;
+  padding: 20px 40px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+}
+.accordion-question {
+  font-weight: bolder;
+}
+
+i {
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  padding-left: 60px;
+  cursor: pointer;
+}
+.accordion-answer {
+  transition: ease 0.5s;
+  border-radius: 5px;
+  background: #e29191;
+  color: #ffffff;
+  opacity: 0.8;
+  max-height: 0;
+  overflow: hidden;
+}
+.accordion-answer p {
+  font-weight: bold;
+}
+.accordion.active .accordion-answer {
+  max-height: 200px;
+  overflow: visible;
+  padding: 10px;
+}
+.accordion.active i {
+  transform: rotateX(-180deg);
+}
+@media (min-width: 640px) {
+  .accordion-question {
+    font-size: 18px;
+  }
+}
